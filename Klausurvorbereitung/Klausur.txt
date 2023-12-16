@@ -1,0 +1,13 @@
+Datei einlesen -> am anfang steht welche art von daten
+Formatierte Termianlausgabe
+matplotlib Daten Darstellen mit animation (Größe Farbe etc)
+Messdaten verarbeiten
+Abspeichern
+
+
+2 Messkurven 
+Schnittpunkte bestimmen und in Grafki Darstellen
+Alle hilfsmittel
+Zwischenschritte
+eigene Klasse bauen zB Klasse Einlesen, Klasse Messdaten ... 
+1,5h 
