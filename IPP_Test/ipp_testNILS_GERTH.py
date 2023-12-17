@@ -99,6 +99,7 @@ def plot_track_02(x, y):
   plt.xlabel("x")
   plt.ylabel("y")
   plt.grid(1)  
+  plt.gca().set_aspect("equal") #Aspektverhältnis gleich
   plt.show()
 
 def main_02():
@@ -131,6 +132,7 @@ def plot_track_03(x, y):
   for i in range(0,len(x), 10):
     print(i)
     plt.scatter(x[i], y[i], marker="X",c="red" )
+  #plt.scatter(x[::10], y[::10], marker="X",c="red" ) #andere Option zum Plotten
   plt.xlabel("x")
   plt.ylabel("y")
   plt.grid(1)  
@@ -504,12 +506,12 @@ if __name__ == '__main__':
   print('IPP Test')
 
   #main_01()
-  #main_02()
-  #main_03()
+ # main_02()
+  main_03()
   #main_04()
   #main_05()
   #main_06()
-  main_07()
+ # main_07()
 
   exit()
 #-------------------------------------------------------------------------------
