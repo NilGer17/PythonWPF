@@ -27,9 +27,6 @@ Allgemeine Hinweise:
 #---------------------------------------
 
 
-import numpy as np
-
-from matplotlib import pyplot as plt
 #---------------------------------------
 # Globale Variablen
 #
@@ -38,13 +35,29 @@ from matplotlib import pyplot as plt
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #---------------------------------------
 # Name der Eingabedatei mit Trackdaten: Format s. Datei
-input_filename = '/home/nils/PhythonWPF/IPP_Test/ipp_track.txt'
+# Pfad zur Eingabedatei auf meinem Linux
+#input_filename = '/home/holtv/ipp_track.txt'
+#-------------------
+# Pfad zur Eingabedatei, wenn diese im gleichen Verzeichnis liegt, in dem auch das 
+# Python-Skript gestartet wird.
+input_filename = './ipp_track.txt'
+#---------------------------------------
 
+#---------------------------------------
 # Name der Ausgabedatei für Marker-Daten
-output_filename = '/home/nils/PhythonWPF/IPP_Test/ipp_marker.txt'
+#-------------------
+# Pfad zur Ausgabedatei auf meinem Linux
+#output_filename = '/home/holtv/ipp_marker.txt'
+#-------------------
+# Pfad zur Ausgabedatei, wenn diese im gleichen Verzeichnis liegt, in dem auch das 
+# Python-Skript gestartet wird.
+output_filename = './ipp_marker.txt'
+#---------------------------------------
 
 # Marker-Intervall-Distanz
 marker_dist = 50.0
+#---------------------------------------
+
 
 """
 ================================================================================
@@ -58,19 +71,20 @@ Aufgabe 01
 ================================================================================
 """
 #---------------------------------------
-# Hier Funktion read_data_01() definieren
-def read_data_01(file):
-  return np.loadtxt(file, skiprows=1, unpack=1)
+# TODO Hier Funktion read_data_01() definieren
 #---------------------------------------
 def main_01():
   # Einlesen der Daten
-  input_data = read_data_01(input_filename)
+  # TODO ... = read_data_01(input_filename)
 
   # Ausgabe der Anzahl der Datensätze
-  print(len(input_data))
+  # TODO ... 
 
   # Ausgabe der Anzahl der Daten
-  print(input_data)
+  # TODO ...
+
+  # 'pass' kann entfernt werden, wenn andere Befehle vorhanden sind.
+  pass
 #---------------------------------------
 
 """
@@ -88,65 +102,46 @@ Aufgabe 02
 ================================================================================
 """
 #---------------------------------------
-# Hier Funktion read_data_02() definieren
-def read_data_02(file):
-  return np.loadtxt(file, skiprows=1, unpack=1)
+# TODO Hier Funktion read_data_02() definieren
 #---------------------------------------
-# Hier Funktion plot_track_02() definieren
+# TODO Hier Funktion plot_track_02() definieren
 #---------------------------------------
-def plot_track_02(x, y):
-  plt.plot(x, y, "blue")
-  plt.xlabel("x")
-  plt.ylabel("y")
-  plt.grid(1)  
-  plt.gca().set_aspect("equal") #Aspektverhältnis gleich
-  plt.show()
-
 def main_02():
   # Einlesen der Daten
- input_data = read_data_02(input_filename)
+  # TODO ... = read_data_02(input_filename)
 
 
   # Ausgabe des Tracks als x/y-Plot
- a =  plot_track_02(input_data[1],input_data[2])
+  # TODO ... plot_track_02(x, y)
+
+  # 'pass' kann entfernt werden, wenn andere Befehle vorhanden sind.
+  pass
 #---------------------------------------
 
 """
 ================================================================================
 Aufgabe 03
+
 1. Einlesen der Daten wie in Aufgabe 01
 2. Ausgabe der Trackdaten als x/y-Plot wie in Aufgabe 02
 3. Jeden 10. Wegpunkt des Tracks durch ein rotes X im Plot markieren
 ================================================================================
 """
 #---------------------------------------
-# Hier Funktion read_data_03() definieren
-def read_data_03(file):
-  return np.loadtxt(file, skiprows=1, unpack=1)
+# TODO Hier Funktion read_data_03() definieren
 #---------------------------------------
-# Hier Funktion plot_track_03() definieren
+# TODO Hier Funktion plot_track_03() definieren
 #---------------------------------------
-def plot_track_03(x, y):
-  plt.plot(x, y, "blue")
-  #print(range(0,len(x), 10))
-  for i in range(0,len(x), 10):
-    print(i)
-    plt.scatter(x[i], y[i], marker="x",c="red" )
-  #plt.scatter(x[::10], y[::10], marker="X",c="red" ) #andere Option zum Plotten
-  plt.xlabel("x")
-  plt.ylabel("y")
-  plt.grid(1)  
-  plt.gca().set_aspect("equal") #Aspektverhältnis gleich
-  plt.show()
-
 def main_03():
   # Einlesen der Daten
-  input_data = read_data_03(input_filename)
-  x = input_data[1]
-  y = input_data[2]
+  # TODO ... = read_data_03(input_filename)
+
 
   # Ausgabe des Tracks als x/y-Plot mit Weg-Markern
-  plot_track_03(x, y)
+  # TODO ... plot_track_03(x, y)
+
+  # 'pass' kann entfernt werden, wenn andere Befehle vorhanden sind.
+  pass
 #---------------------------------------
 
 """
@@ -167,63 +162,27 @@ Aufgabe 04
    an die Plot-Funktion und stellen Sie die Marker als rotes X im x/y-Plot dar.
 ================================================================================
 """
-import math
 #---------------------------------------
-# Hier Funktion read_data_04() definieren
-def read_data_04(file):
-  return np.loadtxt(file, skiprows=1, unpack=1)
+# TODO Hier Funktion read_data_04() definieren
 #---------------------------------------
-# Hier Funktion ev_marker_04() definieren
-def ev_marker_04(x, y, marker_dist):
-  dx = 0
-  dy =  0
-  xm = []
-  ym = []
-  xm.append(x[0])
-  ym.append(y[0])
-  for i in range(0,len(x)):
-    distance = math.sqrt(dx**2 + dy**2)
-    if  distance >= marker_dist:
-      xm.append(x[i])
-      ym.append(y[i])
-      dx = 0
-      dy = 0
-    dx = x[i] - xm[-1] 
-    dy = y[i] - ym[-1] 
-  
-  return xm, ym
+# TODO Hier Funktion ev_marker_04() definieren
 #---------------------------------------
-# Hier Funktion plot_track_04() definieren
+# TODO Hier Funktion plot_track_04() definieren
 #---------------------------------------
-def plot_track_04(x, y, xm, ym):
-  plt.plot(x, y, "blue")
-  #print(range(0,len(x), 10))
-  plt.scatter(xm, ym, marker="X",c="red" )
-  plt.xlabel("x")
-  plt.ylabel("y")
-  plt.grid(1)  
-  plt.gca().set_aspect("equal") #Aspektverhältnis gleich
-  plt.show()
 def main_04():
   # Einlesen der Daten
-  input_data = read_data_04(input_filename)
-  x = input_data[1]
-  y = input_data[2]
+  # TODO ... = read_data_04(input_filename)
 
 
   # Berechnung der Weg-Marker im Abstand >= marker_dist
-  #xm, ym = ev_marker_04(x,y,10)
-  xm, ym = ev_marker_04(x,y,marker_dist)
-  #print(xm)
+  # TODO ... xm, ym = ev_marker_04(x,y,marker_dist)
+
   # Ausgabe des Tracks als x/y-Plot mit Weg-Markern
-  plot_track_04(x, y, xm, ym)
+  # TODO ... plot_track_04(x, y, xm, ym)
+
+  # 'pass' kann entfernt werden, wenn andere Befehle vorhanden sind.
+  pass
 #---------------------------------------
-
-
-#Pause 16:50 -> 1h
-
-#Start 9:00
-
 
 """
 ================================================================================
@@ -249,68 +208,30 @@ Aufgabe 05
 ================================================================================
 """
 #---------------------------------------
-# Hier Funktion read_data_05() definieren
-def read_data_05(file):
-  return np.loadtxt(file, skiprows=1, unpack=1)
+# TODO Hier Funktion read_data_05() definieren
 #---------------------------------------
-# Hier Funktion ev_marker_05() definieren
-def ev_marker_05(x, y, marker_dist):
-  dx = 0
-  dy =  0
-  xm = []
-  ym = []
-  xm.append(x[0])
-  ym.append(y[0])
- # print(x, np.interp(marker_dist, x, y, period=marker_dist) )
-  for i in range(0,len(x)):
-    #print(x, np.interp(10, x, y) )
-    distance = math.sqrt(dx**2 + dy**2)
-    if  distance >= marker_dist:
-      anteil = marker_dist/distance #Anteil, wie weit vom letzten marker gegangen werden muss um genau MarkerDist zu erreichen
-      print(anteil)
-      x_interp = xm[-1] + (dx*anteil) #letzter marker + abstand zum nächsten der mindestens 50 weg ist * anteil
-      y_interp = ym[-1] + (dy*anteil)
-      xm.append(x_interp)
-      ym.append(y_interp)
-      dx = 0
-      dy = 0
-    dx = x[i]- xm[-1] 
-    dy = y[i]- ym[-1]   
-  return xm, ym
+# TODO Hier Funktion ev_marker_05() definieren
 #---------------------------------------
-# Hier Funktion write_marker_05() definieren
-def write_marker_05(xm, ym, output_filename):
-  out = list(zip(xm,ym))
-  header = "%15s\t%15s"%("x","y")
-  np.savetxt(output_filename, out, header=header)
+# TODO Hier Funktion write_marker_05() definieren
 #---------------------------------------
-# Hier Funktion plot_track_05() definieren
-def plot_track_05(x, y, xm, ym):
-  plt.plot(x, y, "blue")
-  #print(range(0,len(x), 10))
-  plt.scatter(xm, ym, marker="X",c="red" )
-  plt.xlabel("x")
-  plt.ylabel("y")
-  plt.grid(1)  
-  plt.gca().set_aspect("equal") #Aspektverhältnis gleich
-  plt.show()
+# TODO Hier Funktion plot_track_05() definieren
 #---------------------------------------
-
 def main_05():
   # Einlesen der Daten
-  input_data = read_data_04(input_filename)
-  x = input_data[1]
-  y = input_data[2]
+  # TODO ... = read_data_05(input_filename)
 
 
   # Berechnung der Weg-Marker im Abstand >= marker_dist
-  xm, ym = ev_marker_05(x,y,marker_dist)
+  # TODO ... xm, ym = ev_marker_05(x,y,marker_dist)
 
   # Speichern der Weg-Marker in Datei
-  write_marker_05(xm,ym,output_filename)
+  # TODO ... write_marker_05(xm,ym,output_filename)
 
   # Ausgabe des Tracks als x/y-Plot mit Weg-Markern
-  plot_track_05(x, y, xm, ym)
+  # TODO ... plot_track_05(x, y, xm, ym)
+
+  # 'pass' kann entfernt werden, wenn andere Befehle vorhanden sind.
+  pass
 #---------------------------------------
 
 """
@@ -341,67 +262,26 @@ erstellen.)
 ================================================================================
 """
 #---------------------------------------
-# Hier Klasse track_data_t definieren
+# TODO Hier Klasse track_data_t definieren
 #---------------------------------------
-class track_data_t_06:
-  x:list
-  y:list
-  xm:list
-  ym:list
-  def __init__(self) -> None:
-    self.x = []
-    self.xm =[]
-    self.y = []
-    self.ym = []
-  def read_data(self,input_filename):
-    input = np.loadtxt(input_filename, skiprows=1, unpack=1)
-    self.x = input[1]
-    self.y = input[2]
-  def ev_marker(self, marker_dist):
-    dx = 0
-    dy =  0
-    self.xm.append(self.x[0])
-    self.ym.append(self.y[0])
-    for i in range(0,len(self.x)):
-      distance = math.sqrt(dx**2 + dy**2)
-      if  distance >= marker_dist:
-        anteil = marker_dist/distance #Anteil, wie weit vom letzten marker gegangen werden muss um genau MarkerDist zu erreichen
-        x_interp = self.xm[-1] + (dx*anteil) #letzter marker + abstand zum nächsten der mindestens 50 weg ist * anteil
-        y_interp = self.ym[-1] + (dy*anteil)
-        self.xm.append(x_interp)
-        self.ym.append(y_interp)
-        dx = 0
-        dy = 0
-      dx = self.x[i]- self.xm[-1] 
-      dy = self.y[i]- self.ym[-1] 
-  def write_marker(self,output_filename):
-    out = list(zip(self.xm,self.ym))
-    header = "%15s\t%15s"%("x","y")
-    np.savetxt(output_filename, out, header=header)
-  def plot_track(self):
-    plt.plot(self.x, self.y, "blue")
-    plt.scatter(self.xm, self.ym, marker="X",c="red" )
-    plt.xlabel("x")
-    plt.ylabel("y")
-    plt.grid(1)  
-    plt.gca().set_aspect("equal") #Aspektverhältnis gleich
-    plt.show()
-
 def main_06():
   # Instanziieren eines Objekts der Klasse 'track_data_t'
-  track_data = track_data_t_06()
+  # TODO ... track_data = track_data_t_06()
 
   # Einlesen der Daten
-  track_data.read_data(input_filename)
+  # TODO ... track_data.read_data(input_filename)
 
   # Berechnung der Weg-Marker im Abstand >= marker_dist
-  track_data.ev_marker(marker_dist)
+  # TODO ... track_data.ev_marker(marker_dist)
 
   # Speichern der Weg-Marker in Datei
-  track_data.write_marker(output_filename)
+  # TODO ... track_data.write_marker(output_filename)
 
   # Ausgabe des Tracks als x/y-Plot mit Weg-Markern
-  track_data.plot_track()
+  # TODO ... track_data.plot_track()
+
+  # 'pass' kann entfernt werden, wenn andere Befehle vorhanden sind.
+  pass
 #---------------------------------------
 
 """
@@ -416,89 +296,31 @@ Ergänzen Sie die in Aufgabe 06 erstellte Klasse 'track_data_t' um eine Methode
 
 ================================================================================
 """
-class track_data_t_07:
-  t:list
-  x:list
-  y:list
-  xm:list
-  ym:list
-  def __init__(self) -> None:
-    self.x = []
-    self.xm =[]
-    self.y = []
-    self.ym = []
-    self.t = []
-  def read_data(self,input_filename):
-    input = np.loadtxt(input_filename, skiprows=1, unpack=1)
-    self.x = input[1]
-    self.y = input[2]
-    self.t = input[0]
-  def ev_marker(self, marker_dist):
-    dx = 0
-    dy =  0
-    self.xm.append(self.x[0])
-    self.ym.append(self.y[0])
-    for i in range(0,len(self.x)):
-      distance = math.sqrt(dx**2 + dy**2)
-      if  distance >= marker_dist:
-        anteil = marker_dist/distance #Anteil, wie weit vom letzten marker gegangen werden muss um genau MarkerDist zu erreichen
-        x_interp = self.xm[-1] + (dx*anteil) #letzter marker + abstand zum nächsten der mindestens 50 weg ist * anteil
-        y_interp = self.ym[-1] + (dy*anteil)
-        self.xm.append(x_interp)
-        self.ym.append(y_interp)
-        dx = 0
-        dy = 0
-      dx = self.x[i]- self.xm[-1] 
-      dy = self.y[i]- self.ym[-1] 
-  def write_marker(self,output_filename):
-    out = list(zip(self.xm,self.ym))
-    header = "%15s\t%15s"%("x","y")
-    np.savetxt(output_filename, out, header=header)
-  def plot_track(self):
-    plt.figure("Track")
-    plt.plot(self.x, self.y, "blue")
-    plt.scatter(self.xm, self.ym, marker="X",c="red" )
-    plt.xlabel("x")
-    plt.ylabel("y")
-    plt.gca().set_aspect("equal") #Aspektverhältnis gleich
-    plt.grid(1)  
-    #plt.show()
-  def plot_data(self):
-    fig, ax = plt.subplots(2)
-    fig.suptitle("Data")
-    ax[0].plot(self.t, self.x, "blue", linestyle="--" )
-    ax[0].set_xlabel("t")
-    ax[0].set_ylabel("x")
-    ax[1].plot(self.t, self.y, "red", ".") 
-    ax[1].set_xlabel("t")
-    ax[1].set_ylabel("y")
-
-    plt.show()
 #---------------------------------------
-# Hier Klasse track_data_t definieren
+# TODO Hier Klasse track_data_t definieren
 #---------------------------------------
 def main_07():
   # Instanziieren eines Objekts der Klasse 'track_data_t'
-  track_data = track_data_t_07()
+  # TODO ... track_data = track_data_t_07()
 
   # Einlesen der Daten
-  track_data.read_data(input_filename)
+  # TODO ... track_data.read_data(input_filename)
 
   # Berechnung der Weg-Marker im Abstand >= marker_dist
-  track_data.ev_marker(marker_dist)
+  # TODO ... track_data.ev_marker(marker_dist)
 
   # Speichern der Weg-Marker in Datei
-  track_data.write_marker(output_filename)
+  # TODO ... track_data.write_marker(output_filename)
 
   # Ausgabe des Tracks als x/y-Plot mit Weg-Markern
-  track_data.plot_track()
+  # TODO ... track_data.plot_track()
 
   # Ausgabe der x- und y-Position als Funktion der Zeit t
-  track_data.plot_data()
+  # TODO ... track_data.plot_data()
+
+  # 'pass' kann entfernt werden, wenn andere Befehle vorhanden sind.
+  pass
 #---------------------------------------
-
-
-#11:00 ->2h 
 
 """
 ================================================================================
@@ -510,13 +332,13 @@ Die aufzurufende bzw. zu bearbeitende Teilaufgabe ist jeweils einzukommentieren.
 if __name__ == '__main__':
   print('IPP Test')
 
- # main_01()
- # main_02()
+  main_01()
+  #main_02()
   #main_03()
   #main_04()
   #main_05()
   #main_06()
-  main_07()
+  #main_07()
 
   exit()
 #-------------------------------------------------------------------------------
