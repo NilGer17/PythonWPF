@@ -1,0 +1,81 @@
+{
+    "parking_positions": [
+        {
+            "id": "D1",
+            "type": "terminal",
+            "lat": 7.121760518622691,
+            "lon": 50.88046238340752,
+            "max_length": 70.0,
+            "max_wingspan": 50.0,
+            "isOccupied": true,
+            "fuel_available": true,
+            "numb_jetbridged": null
+        },
+        {
+            "id": "D2",
+            "type": "terminal",
+            "lat": 7.120920278624181,
+            "lon": 50.88103550685618,
+            "max_length": 70.0,
+            "max_wingspan": 50.0,
+            "isOccupied": false,
+            "fuel_available": true,
+            "numb_jetbridged": null
+        },
+        {
+            "id": "D3",
+            "type": "terminal",
+            "lat": 7.119972000855611,
+            "lon": 50.88151179029258,
+            "max_length": 70.0,
+            "max_wingspan": 50.0,
+            "isOccupied": false,
+            "fuel_available": false,
+            "numb_jetbridged": null
+        },
+        {
+            "id": "D4",
+            "type": "outer",
+            "lat": 7.119692723204044,
+            "lon": 50.883724063299205,
+            "max_length": 73.1,
+            "max_wingspan": 45.0,
+            "isOccupied": false,
+            "power_available": true,
+            "shuttle_time": 75.0
+        },
+        {
+            "id": "D5",
+            "type": "outer",
+            "lat": 7.120682751474829,
+            "lon": 50.883253341985274,
+            "max_length": 70.0,
+            "max_wingspan": 45.0,
+            "isOccupied": false,
+            "power_available": true,
+            "shuttle_time": 95.0
+        },
+        {
+            "id": "D6",
+            "type": "outer",
+            "lat": 7.121588305556415,
+            "lon": 50.88279523433427,
+            "max_length": 70.0,
+            "max_wingspan": 45.0,
+            "isOccupied": true,
+            "power_available": false,
+            "shuttle_time": 105.0
+        },
+        {
+            "id": "D7",
+            "type": "outer",
+            "lat": 7.122956912939301,
+            "lon": 50.88209748037052,
+            "max_length": 60,
+            "max_wingspan": 40.0,
+            "isOccupied": false,
+            "power_available": false,
+            "shuttle_time": 7125.0
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+{
+	"parking_positions": [
+		{
+			"id": "D1",
+			"type": "terminal",
+			"lon": 50.88046238340752,
+			"lat": 7.121760518622691,
+			"max_length": 70.0,
+			"max_wingspan": 50.0,
+			"fuel_available": true,
+			"number_of_jet_bridges": 1,
+			"Occupied":false
+		},
+		{
+			"id": "D2",
+			"type": "terminal",
+			"lon": 50.88103550685618,
+			"lat": 7.120920278624181,
+			"max_length": 70.0,
+			"max_wingspan": 50.0,
+			"fuel_available": true,
+			"number_of_jet_bridges": 1,
+			"Occupied":false
+		},
+		{
+			"id": "D3",
+			"type": "terminal",
+			"lon": 50.88151179029258,
+			"lat": 7.119972000855611,
+			"max_length": 70.0,
+			"max_wingspan": 50.0,
+			"fuel_available": false,
+			"number_of_jet_bridges": 2,
+			"Occupied":true
+		},
+		{
+			"id": "D4",
+			"type": "outer",
+			"lon": 50.883724063299205,
+			"lat": 7.119692723204044,
+			"max_length": 73.1,
+			"max_wingspan": 45.0,
+			"shuttle_time": 75.0,
+			"power_available": true,
+			"Occupied":false
+		},
+		{
+			"id": "D5",
+			"type": "outer",
+			"lon": 50.883253341985274,
+			"lat": 7.120682751474829,
+			"max_length": 70.0,
+			"max_wingspan": 45.0,
+			"shuttle_time": 95.0,
+			"power_available": true,
+			"Occupied":false
+		},
+		{
+			"id": "D6",
+			"type": "outer",
+			"lon": 50.88279523433427,
+			"lat": 7.121588305556415,
+			"max_length": 70.0,
+			"max_wingspan": 45.0,
+			"shuttle_time": 105.0,
+			"power_available": false,
+			"Occupied":false
+		},
+		{
+			"id": "D7",
+			"type": "outer",
+			"lon": 50.88209748037052,
+			"lat": 7.122956912939301,
+			"max_length": 60,
+			"max_wingspan": 40.0,
+			"shuttle_time": 7125.0,
+			"power_available": false,
+			"Occupied":true
+		}
+	]
+}
